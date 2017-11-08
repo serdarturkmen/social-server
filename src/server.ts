@@ -27,6 +27,12 @@ app.set('views', 'src')
 
 app.get('*.*', express.static(join(__dirname, '..', 'dist')));
 
+// TODO: implement data requests securely
+app.get('/api/*', (req, res) => {
+  res.status(200).send('data requests are not supported');
+});
+
+// All regular routes use the Universal engine
 app.get('*', (req, res) => {
   res.render('index', { req });
 });
@@ -34,3 +40,5 @@ app.get('*', (req, res) => {
 app.listen(PORT, () => {
   console.log(`listening on http://localhost:${PORT}!`);
 });
+
+
