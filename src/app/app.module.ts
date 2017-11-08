@@ -5,14 +5,12 @@ import { HttpModule } from '@angular/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FirstContentComponent } from './first-content/first-content.component';
-import { SecondContentComponent } from './second-content/second-content.component';
+import { ContentComponent } from './content/content.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FirstContentComponent,
-    SecondContentComponent
+    ContentComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'social-server'}),
